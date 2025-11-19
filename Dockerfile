@@ -16,7 +16,7 @@ COPY requirements.txt .
 RUN pip install mysqlclient
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest the application code to container
+# Copy the the application code to container
 COPY . .
 
 # Command to run the python app in container
