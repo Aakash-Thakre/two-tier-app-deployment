@@ -1,3 +1,5 @@
+<div align="left">
+
 🚀 Flask + MySQL Two-Tier Application (Dockerized)
 
 A fully containerized Two-Tier Application consisting of:
@@ -51,5 +53,4 @@ docker run -d --name flask-app \
  --link mysql-db:mysql \
  -p 5000:5000 \
  flask-app
-
- 
+</div>
