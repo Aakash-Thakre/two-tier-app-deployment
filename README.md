@@ -57,8 +57,48 @@ docker run -d --name flask-app \
 create a Docker compose file
 
 PHASE-2
-
+Architecture Diagram
 <img width="1536" height="1024" alt="ChatGPT Image Jan 5, 2026, 06_48_03 PM" src="https://github.com/user-attachments/assets/c4d0607a-5ae3-41fa-90a3-8dd8ae759d1e" />
+
+Prerequisites
+Ubuntu OS (Xenial or later)
+sudo privileges
+Internet access
+t2.medium instance type or higher
+AWS Setup
+Ensure that all instances are in the same Security Group.
+Expose port 6443 in the Security Group to allow worker nodes to join the cluster.
+Expose port 22 in the Security Group to allows SSH access to manage the instance..
+To do above setup, follow below provided steps
+Step 1: Identify or Create a Security Group
+Log in to the AWS Management Console:
+
+Go to the EC2 Dashboard.
+Locate Security Groups:
+
+In the left menu under Network & Security, click on Security Groups.
+Create a New Security Group:
+
+Click on Create Security Group.
+Provide the following details:
+Name: (e.g., Kubernetes-Cluster-SG)
+Description: A brief description for the security group (mandatory)
+VPC: Select the appropriate VPC for your instances (default is acceptable)
+Add Rules to the Security Group:
+
+Allow SSH Traffic (Port 22):
+
+Type: SSH
+Port Range: 22
+Source: 0.0.0.0/0 (Anywhere) or your specific IP
+Allow Kubernetes API Traffic (Port 6443):
+
+Type: Custom TCP
+Port Range: 6443
+Source: 0.0.0.0/0 (Anywhere) or specific IP ranges
+Save the Rules:
+
+Click on Create Security Group to save the settings.
 
 </div>
 
