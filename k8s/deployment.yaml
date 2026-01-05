@@ -1,4 +1,4 @@
-pi version: apps/v1
+api version: apps/v1
 kind: Deployment
 metadata:
   name: two tier app
