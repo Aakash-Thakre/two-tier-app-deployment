@@ -19,7 +19,7 @@ spec:
           image: aakashthakre/flaskapp:latest
           env:
             - name: MYSQL_HOST
-              value: "sql_host_value" 
+              value: "10.100.53.124" 
             - name: MYSQL_USER
               value: "root"
             - name: MYSQL_PASSWORD
