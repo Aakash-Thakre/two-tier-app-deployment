@@ -22,12 +22,6 @@ Persistent data storage using Docker volumes
 
 Proper wait mechanism for MySQL initialization
 
-Publicly accessible deployment
-
-Clean UI (screenshot shown below)
-
-📸 Application UI
-
 🏗️ Project Structure
 two-tier-app/
 │── app.py
@@ -54,3 +48,6 @@ docker run -d --name flask-app \
  -p 5000:5000 \
  flask-app
 </div>
+
+
+
