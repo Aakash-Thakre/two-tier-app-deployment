@@ -1,5 +1,9 @@
 <div align="left">
 
+Multi-Phase Application Deployment: Docker → Kubernetes → Helm/EKS
+
+PHASE-1
+
 🚀 Flask + MySQL Two-Tier Application (Dockerized)
 
 A fully containerized Two-Tier Application consisting of:
@@ -36,6 +40,7 @@ Build Flask Image
 docker build -t flask-app .
 
 Run MySQL Container
+
 docker run -d --name mysql-db \
  -e MYSQL_ROOT_PASSWORD=root \
  -e MYSQL_DATABASE=chatbotdb \
@@ -43,10 +48,18 @@ docker run -d --name mysql-db \
  mysql:8
 
 Run Flask Container
+
 docker run -d --name flask-app \
  --link mysql-db:mysql \
  -p 5000:5000 \
  flask-app
+
+create a Docker compose file
+
+PHASE-2
+
+<img width="1536" height="1024" alt="ChatGPT Image Jan 5, 2026, 06_48_03 PM" src="https://github.com/user-attachments/assets/c4d0607a-5ae3-41fa-90a3-8dd8ae759d1e" />
+
 </div>
 
 
