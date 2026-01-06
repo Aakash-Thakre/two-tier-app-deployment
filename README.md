@@ -58,5 +58,14 @@ docker run -d --name flask-app \
 flask-app
 ```
 
+**Run Using Docker Compose**
+
+```bash
+docker compose up -d --build
+```
+
+📌 PHASE 2: Kubernetes Deployment
+
 ## 🏗️ Architecture
+
 
