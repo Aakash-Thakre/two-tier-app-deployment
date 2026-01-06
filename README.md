@@ -43,8 +43,8 @@ docker build -t flask-app .
 **Run MySQL Container**
 ```bash
 docker run -d --name mysql-db \
--e MYSQL_ROOT_PASSWORD=root \
--e MYSQL_DATABASE=chatbotdb \
+-e MYSQL_ROOT_PASSWORD=admin\
+-e MYSQL_DATABASE=mydb \
 -p 3306:3306 \
 mysql:5.7
 ```
