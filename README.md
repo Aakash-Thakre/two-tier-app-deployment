@@ -19,5 +19,35 @@ A fully containerized Two-Tier Application consisting of:
 
 ---
 
+
+---
+
+## ✨ Features
+
+- Flask app served via Docker
+- MySQL database running in a separate container
+- Persistent data storage using Docker volumes
+- Proper wait mechanism for MySQL initialization
+- Multi-container orchestration using Docker Compose
+
+---
+
+## 🐳 Docker Commands Used
+
+### Build Flask Image
+
+```bash
+docker build -t flask-app .
+
+```
+Run MySQL Container
+```bash
+docker run -d --name mysql-db \
+-e MYSQL_ROOT_PASSWORD=root \
+-e MYSQL_DATABASE=chatbotdb \
+-p 3306:3306 \
+mysql:5.7
+```
+
 ## 🏗️ Architecture
 
