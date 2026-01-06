@@ -40,13 +40,22 @@ A fully containerized Two-Tier Application consisting of:
 docker build -t flask-app .
 
 ```
-Run MySQL Container
+**Run MySQL Container**
 ```bash
 docker run -d --name mysql-db \
 -e MYSQL_ROOT_PASSWORD=root \
 -e MYSQL_DATABASE=chatbotdb \
 -p 3306:3306 \
 mysql:5.7
+```
+
+**Run Flask APP Container**
+
+```bash
+docker run -d --name flask-app \
+--link mysql-db:mysql \
+-p 5000:5000 \
+flask-app
 ```
 
 ## 🏗️ Architecture
