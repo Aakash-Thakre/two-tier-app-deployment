@@ -19,9 +19,6 @@ A fully containerized Two-Tier Application consisting of:
 
 ---
 
-
----
-
 ## ✨ Features
 
 - Flask app served via Docker
