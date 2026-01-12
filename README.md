@@ -147,7 +147,17 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
     # --cri-socket "unix:///run/containerd/containerd.sock" --v=5
    ```
 
+   **AWS Instances**
+![AWS_instances](https://github.com/user-attachments/assets/3dace7e7-c90d-4b7b-befc-e8a779ede7f0)
+
 ## 🏗️ Architecture
+
+   <img width="1536" height="1024" alt="ChatGPT Image Jan 5, 2026, 06_48_03 PM" src="https://github.com/user-attachments/assets/f5df5838-3bb9-4ab4-b922-aa1a642007c4" />
+
+ **AWS Security Group Rules**
+    ![AWS Security Group rules](https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e)
+
+
 
 📌 PHASE 2: Flask + MySQL on Kubernetes using Helm (AWS)
 
