@@ -101,7 +101,15 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
       - **VPC**: Select the appropriate VPC for your instances (default is acceptable)
 
 4. **Add Rules to the Security Group**:
-  ![AWS Security Group rules](https://github.com/user-attachments/assets/b8558f95-f03d-457f-b94b-896db1215d44)
+   - **Allow SSH Traffic (Port 22)**:
+      - **Type**: SSH
+      - **Port Range**: `22`
+      - **Source**: `0.0.0.0/0` (Anywhere) or your specific IP
+    
+    - **Allow Kubernetes API Traffic (Port 6443)**:
+      - **Type**: Custom TCP
+      - **Port Range**: `6443`
+      - **Source**: `0.0.0.0/0` (Anywhere) or specific IP ranges
  
 5. **Save the Rules**:
     - Click on **Create Security Group** to save the settings.
@@ -111,9 +119,33 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
 - When launching EC2 instances:
   - Under **Configure Security Group**, select the existing security group (`Kubernetes-Cluster-SG`)
 
-> Note: Security group settings can be updated later as needed.
+> Note: Security group settings can be updated later as needed
 
 
+Once AWS EC2 instances are created ssh with the help of provided command in AWS by downloading the pem key
+
+6. **Execute on Both "Master" & "Worker" Nodes once you have clone the repository
+   ```bash
+   bash two-tier-app-deployment/kubeinstaller/installer.sh
+   ```
+   
+7. **Execute the below script only on Master Node**
+   ```bash
+   bash kubeinstaller/masterinstaller.sh
+   ```
+8. **Execute the below commands on "Worker Node" once the installer.sh script is executed**
+   ```bash
+    # Execute on ALL of your Worker Nodes
+    
+    # 1. Perform pre-flight checks and reset the node:
+    sudo kubeadm reset -f
+    
+    # 2. Paste the join command you got from the master node and append --v=5 at the end:
+    # Example:
+    # sudo kubeadm join <control-plane-ip>:6443 --token <token> \
+    # --discovery-token-ca-cert-hash sha256:<hash> \
+    # --cri-socket "unix:///run/containerd/containerd.sock" --v=5
+   ```
 
 ## 🏗️ Architecture
 
