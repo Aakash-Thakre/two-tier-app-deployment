@@ -172,15 +172,33 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
 
 ![security groups](https://github.com/user-attachments/assets/1e4c5a8e-1e7f-40e4-88ab-8d81b616fe08)
 
-1. **Install HELM on "Master Node"
+1. **Install HELM on "Master Node"**
    ```bash
    bash HelmInstaller/helmInstaller.sh
    ```
-2. Our Flask-App have depency on MySql first deploy Mysql using helm
+2. **Our Flask-App have depency on MySql first deploy Mysql using helm**
    ```bash
-   helm create mysql-chart
+   helm install mysql ./mysql-chart
    ```
-3. Updates values in the values,yaml file created by helm
+3. ** Create a message table in the SQL container
+   ```bash
+   kubectl exec -it <pod-name> -- /bin/sh
+   mysql -u root -p
+   Enter the password
+   use mydb;
+   show tables;
+   CREATE TABLE messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    message TEXT);
+   ```
+
+4. **Install flask-app-chart**
+   ```bash
+   helm install flask-app ./flask-app-chart
+   ```
+4. Results
+   ``` bash 
+   kubectl get pods 
     
    
 
