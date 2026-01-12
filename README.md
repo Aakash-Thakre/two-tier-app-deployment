@@ -152,7 +152,7 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
 
 ## 🏗️ Architecture
 
-   <img width="1536" height="1024" alt="ChatGPT Image Jan 5, 2026, 06_48_03 PM" src="https://github.com/user-attachments/assets/f5df5838-3bb9-4ab4-b922-aa1a642007c4" />
+   <img width="1340" height="950" alt="ChatGPT Image Jan 5, 2026, 06_48_03 PM" src="https://github.com/user-attachments/assets/f5df5838-3bb9-4ab4-b922-aa1a642007c4" />
 
  **AWS Security Group Rules**
     ![AWS Security Group rules](https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e)
@@ -161,14 +161,32 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
 
 📌 PHASE 2: Flask + MySQL on Kubernetes using Helm (AWS)
 
-This project demonstrates:
-- Containerization using Docker
-- Kubernetes deployment using Helm charts
-- MySQL database integration
-- Debugging real production issues (CrashLoopBackOff)
-- Deployment on AWS EC2
 
-## Configure AWS instance
+## **Configure AWS instance using above Kubeadm Installation Guide**
+
+**AWS Instnaces for HELM**
+
+![AWS instance Helm](https://github.com/user-attachments/assets/404b0fd4-193a-4c8c-b28d-7d4ed41da7d5)
+
+**AWS Security Group Rules**
+
+![security groups](https://github.com/user-attachments/assets/1e4c5a8e-1e7f-40e4-88ab-8d81b616fe08)
+
+1. **Install HELM on "Master Node"
+   ```bash
+   bash HelmInstaller/helmInstaller.sh
+   ```
+2. Our Flask-App have depency on MySql first deploy Mysql using helm
+   ```bash
+   helm create mysql-chart
+   ```
+3. Updates values in the values,yaml file created by helm
+    
+   
+
+
+
+
 
 
 
