@@ -18,7 +18,7 @@
     - Flask application
 -Implemented configurable deployments using Helm values
 
-Deployed the complete stack on:
+### Deployed the complete stack on:
 - A self-managed Kubernetes cluster (using kubeadm) for learning
 - AWS EKS for production-style deployment
 - Exposed the application using a LoadBalancer service
@@ -185,9 +185,18 @@ flask-app
 docker compose up -d --build
 ```
 
-📌 PHASE 2: Kubernetes Deployment
+----
 
-# Kubeadm Installation Guide
+# 📌 PHASE 2: Kubernetes Deployment ON AWS EC2
+
+This phase demonstrates the setup of a Kubernetes cluster on AWS EC2 instances and deployment of applications using Kubernetes manifests. It showcases hands-on experience with:
+
+- Kubernetes cluster creation and configuration
+- Application deployment using Deployment, Service, and ConfigMap manifests
+- Security group configuration on AWS
+
+
+## Kubeadm Installation Guide on AWS EC2 
 
 This guide outlines the steps needed to set up a Kubernetes cluster using `kubeadm`.
 
@@ -280,6 +289,35 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
 
  **AWS Security Group Rules**
     ![AWS Security Group rules](https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e)
+
+- Now, execute below commands one by one
+- 
+```bash
+kubectl apply -f mysql-deployment.yml
+```
+```bash
+kubectl apply -f mysql-deployment-svc.yml
+```
+```bash
+kubectl apply -f persistent-volume.yml
+```
+```bash
+kubectl apply -f persistent-volume-claim.yml
+```
+Before the deployment of the flask-app-deployment run kubectl get svc and copy the mysql cluster IP and paste in the flask-app-deployment.yml env varibale MYSQL_HOST so there is no crashback error
+
+```bash
+kubectl apply -f flask-app-deployment.yml
+```
+```bash
+kubectl apply -f flask-app-deployment-svc.yml
+```
+
+##Results
+
+- Fully functional Kubernetes cluster with master and worker nodes 
+- Multi-tier application deployed successfully and accessible
+- All pods running in Running state with healthy status
 
 
 
