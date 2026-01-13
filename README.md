@@ -64,54 +64,23 @@ A fully containerized Two-Tier Application consisting of:
 
     ```bash
     sudo apt install
-    ```
-
-   ```bash
-   sudo apt update
-   ```
-
-   ```bash
-   sudo apt install docker.io
-   ```
-
-   ```bash
+    sudo apt update
+    sudo apt install docker.io
    sudo chown $USER /var/run/docker.sock
-   ```
-
-   ```bash
    docker ps
-   ```
 
 2. **Now, execute below commands one by one**
 
    ```bash
-   git clone https://github.com/mdazfar2/two-tier-flask-app.git
-   ```
-
-   ```bash
-   cd two-tier-flask-app
-   ```
-
-   ```bash
+   git clone url
+   cd two-tier-app-deployment
    docker build . -t flaskapp
-   ```
-
-   ```bash
    docker images
-   ```
 
-   ```bash
    docker network create twotier
-   ```
-
-   ```bash
    docker run -d -p 5000:5000 --network=twotier -e MYSQL_HOST=mysql -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_DB=myDB --name=flaskapp flaskapp:latest
-   ```
-
-   ```bash
    docker run -d -p 3306:3306 --network=twotier -e MYSQL_DATABASE=myDB -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_ROOT_PASSWORD=admin --name=mysql mysql:5.7
-   ```
-
+   
 3. **Now use the Ip and add the port to :5000**
 
 4. **Then execute the command for MYSQL-**
@@ -130,9 +99,6 @@ A fully containerized Two-Tier Application consisting of:
 
   ```bash
   show databases;
-  ```
-
-  ```bash
   use myDB
   ```
 
@@ -308,7 +274,6 @@ kubectl apply -f flask-app-deployment-svc.yml
 ```
 
 ## Results
-
 - Fully functional Kubernetes cluster with master and worker nodes 
 - Multi-tier application deployed successfully and accessible
 - All pods running in Running state with healthy status
