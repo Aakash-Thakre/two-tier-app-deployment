@@ -1,10 +1,14 @@
 # 🚀 Multi-Phase Application Deployment: Docker → Kubernetes → Helm/EKS
 
-**This project demonstrates a complete real-world DevOps workflow by deploying a Flask + MySQL two-tier application in multiple phases:**
+---
+
+##This project demonstrates a complete real-world DevOps workflow by deploying a Flask + MySQL two-tier application in multiple phases:##
 
 - Phase 1: Docker (Containerization)
 - Phase 2: Kubernetes (Orchestration)
 - Phase 3: Helm + EKS (Production Deployment)
+
+----
 
  **In this project, the following has been designed and implemented:**
 
