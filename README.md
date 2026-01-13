@@ -78,13 +78,9 @@ A fully containerized Two-Tier Application consisting of:
    docker images
 
    docker network create twotier
-   docker run -d -p 5000:5000 --network=twotier -e MYSQL_HOST=mysql -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_DB=myDB --name=flaskapp flaskapp:latest
    docker run -d -p 3306:3306 --network=twotier -e MYSQL_DATABASE=myDB -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_ROOT_PASSWORD=admin --name=mysql mysql:5.7
-   
-3. **Now use the Ip and add the port to :5000**
 
-4. **Then execute the command for MYSQL-**
-
+   ```
    ```bash
    docker exec -it 634c54ae7bbb bash
    ```
@@ -108,41 +104,20 @@ A fully containerized Two-Tier Application consisting of:
          message TEXT
   ```
 
-5. **Show your messages in you MYSQL Database**
+3. **Show your messages in you MYSQL Database**
 
    ```bash
    select * from messages;
    ```
-
-6. **If you want to delete all the history from your database**
-
-   ```bash
-   DELETE FROM messages;
-   ```
+```bash
+   docker run -d -p 5000:5000 --network=twotier -e MYSQL_HOST=mysql -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_DB=myDB --name=flaskapp flaskapp:latest
+```
 
 ***This is all that I deployed two tier flask app using dockerising .
 ### Build Flask Image
 
 ```bash
 docker build -t flask-app .
-
-```
-**Run MySQL Container**
-```bash
-docker run -d --name mysql-db \
--e MYSQL_ROOT_PASSWORD=admin\
--e MYSQL_DATABASE=mydb \
--p 3306:3306 \
-mysql:5.7
-```
-
-**Run Flask APP Container**
-
-```bash
-docker run -d --name flask-app \
---link mysql-db:mysql \
--p 5000:5000 \
-flask-app
 ```
 
 **Run Using Docker Compose**
