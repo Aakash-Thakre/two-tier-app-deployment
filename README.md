@@ -55,12 +55,10 @@ A fully containerized Two-Tier Application consisting of:
 - Persistent data storage using Docker volumes
 - Proper wait mechanism for MySQL initialization
 - Multi-container orchestration using Docker Compose
-
+ 
 ---
 
-## 🐳 Docker Commands Used
-
-# Step by Step guide for making this project-
+## Step by Step guide for conatinerizing and deploying the application using docker
 
 1. **Execute the commands one by one, this is for Ubuntu**
 
