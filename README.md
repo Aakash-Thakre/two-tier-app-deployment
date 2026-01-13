@@ -6,7 +6,7 @@
 - Phase 2: Kubernetes (Orchestration)
 - Phase 3: Helm + EKS (Production Deployment)
 
-# In this project, the following has been designed and implemented:
+ **In this project, the following has been designed and implemented:**
 
 - Containerized both the Flask application and MySQL database using Docker
 - Created a Docker Compose setup for local development and testing
