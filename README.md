@@ -290,21 +290,25 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
  **AWS Security Group Rules**
     ![AWS Security Group rules](https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e)
 
-- Now, execute below commands one by one
+- Now, execute below commands one by one from k8
 - 
 ```bash
-kubectl apply -f mysql-deployment.yml
+kubectl apply -f Sql_deployment.yml
 ```
 ```bash
-kubectl apply -f mysql-deployment-svc.yml
+kubectl apply -f mysql-svc.yml
 ```
 ```bash
-kubectl apply -f persistent-volume.yml
+kubectl apply -f mysql-pv.yml
 ```
 ```bash
-kubectl apply -f persistent-volume-claim.yml
+kubectl apply -f mysql-pvc.yml
 ```
-Before the deployment of the flask-app-deployment run kubectl get svc and copy the mysql cluster IP and paste in the flask-app-deployment.yml env varibale MYSQL_HOST so there is no crashback error
+```bash
+kubectl apply -f mysql-init-configmap.yml
+```
+
+Before the deployment of the flask-app run kubectl get svc and copy the mysql cluster IP and paste in the flask-app-deployment.yml env varibale MYSQL_HOST so there is no crashback error
 
 ```bash
 kubectl apply -f flask-app-deployment.yml
@@ -320,8 +324,7 @@ kubectl apply -f flask-app-deployment-svc.yml
 - All pods running in Running state with healthy status
 
 
-
-📌 PHASE 2: Flask + MySQL on Kubernetes using Helm (AWS)
+📌 PHASE 3: Flask + MySQL on Kubernetes using Helm (AWS)
 
 
 ## **Configure AWS instance using above Kubeadm Installation Guide**
