@@ -294,17 +294,9 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
 - 
 ```bash
 kubectl apply -f Sql_deployment.yml
-```
-```bash
 kubectl apply -f mysql-svc.yml
-```
-```bash
 kubectl apply -f mysql-pv.yml
-```
-```bash
 kubectl apply -f mysql-pvc.yml
-```
-```bash
 kubectl apply -f mysql-init-configmap.yml
 ```
 
@@ -312,12 +304,10 @@ Before the deployment of the flask-app run kubectl get svc and copy the mysql cl
 
 ```bash
 kubectl apply -f flask-app-deployment.yml
-```
-```bash
 kubectl apply -f flask-app-deployment-svc.yml
 ```
 
-##Results
+## Results
 
 - Fully functional Kubernetes cluster with master and worker nodes 
 - Multi-tier application deployed successfully and accessible
