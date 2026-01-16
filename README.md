@@ -242,7 +242,7 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
    <br>
 
 
-- Now, execute below commands one by one from k8 directory
+**Now, execute below commands one by one from k8 directory**
   
 ```bash
 kubectl apply -f Sql_deployment.yml
