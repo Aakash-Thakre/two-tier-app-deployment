@@ -31,7 +31,7 @@
 2. Deploy the same application on a **self-managed Kubernetes cluster (kubeadm on AWS EC2)**
 3. Convert Kubernetes manifests into **Helm charts**
 4. Deploy the same stack using **Helm for production-style setup**
-5. (Optional / Next Step) Deploy on **AWS EKS**
+5. Deploy on **AWS EKS**
 
  <br>
    <p align="center">
