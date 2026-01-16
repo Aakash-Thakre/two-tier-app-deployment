@@ -222,29 +222,28 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
 
    **AWS Instances**
    <br>
-   <p align="center">
+    <p align="center">
        <img src="https://github.com/user-attachments/assets/3dace7e7-c90d-4b7b-befc-e8a779ede7f0" width="800">
-   </p>
+    </p>
    <br>
-
+   
     **AWS Security Group Rules**
-    <br>
-   <p align="center">
-       <img src="https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e" width="800">
-   </p>
    <br>
-
+    <p align="center">
+       <img src="https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e" width="800">
+    </p>
+   <br>
 
 ## 🏗️ Architecture
 
-   <img src="images/arch.png" width="60%">
+   <br>
+    <p align="center">
+       <img src="https://github.com/user-attachments/assets/f5df5838-3bb9-4ab4-b922-aa1a642007c4" width="800">
+    </p>
+   <br>
 
-   <img width="1340" height="950" alt="ChatGPT Image Jan 5, 2026, 06_48_03 PM" src="https://github.com/user-attachments/assets/f5df5838-3bb9-4ab4-b922-aa1a642007c4" />
 
- **AWS Security Group Rules**
-    ![AWS Security Group rules](https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e)
-
-- Now, execute below commands one by one from k8
+- Now, execute below commands one by one from k8 directory
   
 ```bash
 kubectl apply -f Sql_deployment.yml
@@ -266,9 +265,15 @@ kubectl apply -f flask-app-deployment-svc.yml
 - Multi-tier application deployed successfully and accessible
 - All pods running in Running state with healthy status
 
-  ![Result](https://github.com/user-attachments/assets/04f11921-7555-40d8-9883-cdc34e678790)
-  ![Pods](https://github.com/user-attachments/assets/e631672c-908f-4594-94f4-915567cb9e3c)
-
+  <br>
+    <p align="center">
+       <img src="https://github.com/user-attachments/assets/04f11921-7555-40d8-9883-cdc34e678790" width="800">
+    </p>
+   <br>
+    <p align="center">
+       <img src="https://github.com/user-attachments/assets/e631672c-908f-4594-94f4-915567cb9e3c" width="800">
+    </p>
+   <br>
 
 ---
 
