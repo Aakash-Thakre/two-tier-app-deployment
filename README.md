@@ -146,7 +146,7 @@ This phase demonstrates the setup of a Kubernetes cluster on AWS EC2 instances a
 - Security group configuration on AWS
 
 
-## Installed KubeAdm Manually on AWS EC2 instances
+### Set up a self-managed Kubernetes cluster using kubeadm on AWS EC2
 
    a. **AWS Instances**
    <br>
