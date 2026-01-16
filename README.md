@@ -279,17 +279,17 @@ kubectl apply -f flask-app-deployment-svc.yml
 # 📌 PHASE 3: Flask + MySQL on Kubernetes using Helm (AWS)
 
 
-### **Configure AWS instance using above Kubeadm Installation Guide**
+1. **Configure AWS instance using above Kubeadm Installation Guide**
 
-1. **Install HELM on "Master Node"**
+2. **Install HELM on "Master Node"**
    ```bash
    bash HelmInstaller/helmInstaller.sh
    ```
-2. **Our Flask-App have depency on MySql first deploy Mysql using helm**
+3. **Our Flask-App have depency on MySql first deploy Mysql using helm**
    ```bash
    helm install mysql ./mysql-chart
    ```
-3. ** Create a message table in the SQL container
+4. ** Create a message table in the SQL container
    ```bash
    kubectl exec -it <pod-name> -- /bin/sh
    mysql -u root -p
@@ -304,12 +304,12 @@ kubectl apply -f flask-app-deployment-svc.yml
 
 Before the deployment of the flask-app run kubectl get svc and copy the mysql cluster IP and paste in the flask-app-chart/values.yaml env varibale MYSQL_HOST so there is no crashback error`
 
-4. **Install flask-app-chart**
+5. **Install flask-app-chart**
    ```bash
    helm install flask-app ./flask-app-chart
    ```
    
-4. Results
+6. Results
    ``` bash 
    kubectl get all
    ```
