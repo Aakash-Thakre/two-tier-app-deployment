@@ -289,7 +289,7 @@ kubectl apply -f flask-app-deployment-svc.yml
    ```bash
    helm install mysql ./mysql-chart
    ```
-4. ** Create a message table in the SQL container
+4. **Create a message table in the SQL container**
    ```bash
    kubectl exec -it <pod-name> -- /bin/sh
    mysql -u root -p
@@ -309,7 +309,7 @@ Before the deployment of the flask-app run kubectl get svc and copy the mysql cl
    helm install flask-app ./flask-app-chart
    ```
    
-6. Results
+6. **Results**
    ``` bash 
    kubectl get all
    ```
