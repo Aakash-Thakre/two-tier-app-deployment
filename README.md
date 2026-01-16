@@ -279,7 +279,7 @@ kubectl apply -f flask-app-deployment-svc.yml
 # 📌 PHASE 3: Flask + MySQL on Kubernetes using Helm (AWS)
 
 
-## **Configure AWS instance using above Kubeadm Installation Guide**
+### **Configure AWS instance using above Kubeadm Installation Guide**
 
 1. **Install HELM on "Master Node"**
    ```bash
