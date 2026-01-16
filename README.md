@@ -302,13 +302,13 @@ kubectl apply -f flask-app-deployment-svc.yml
 
    ```
 
-> Note: Before the deployment of the flask-app run kubectl get svc and copy the mysql cluster IP and paste in the flask-app-chart/values.yaml env varibale MYSQL_HOST so there is no crashback error`
+ > Note: Before the deployment of the flask-app run kubectl get svc and copy the mysql cluster IP and paste in the flask-app-chart/values.yaml env varibale MYSQL_HOST so there is no crashback error`
 
 5. **Install flask-app-chart**
    ```bash
    helm install flask-app ./flask-app-chart
    ```
-   
+
 6. **Results**
    ``` bash 
    kubectl get all
