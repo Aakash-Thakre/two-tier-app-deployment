@@ -220,23 +220,22 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
     # --cri-socket "unix:///run/containerd/containerd.sock" --v=5
    ```
 
-   **AWS Instances**
+   a. **AWS Instances**
    <br>
     <p align="center">
        <img src="https://github.com/user-attachments/assets/3dace7e7-c90d-4b7b-befc-e8a779ede7f0" width="800">
     </p>
-   <br>
-   
-    **AWS Security Group Rules**
+    
+    b. **AWS Security Group Rules**
    <br>
     <p align="center">
        <img src="https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e" width="800">
     </p>
    <br>
 
-## 🏗️ Architecture
+## Architecture
 
-   <br>
+  <br>
     <p align="center">
        <img src="https://github.com/user-attachments/assets/f5df5838-3bb9-4ab4-b922-aa1a642007c4" width="800">
     </p>
@@ -282,14 +281,6 @@ kubectl apply -f flask-app-deployment-svc.yml
 
 ## **Configure AWS instance using above Kubeadm Installation Guide**
 
-**AWS Instnaces for HELM**
-
-![AWS instance Helm](https://github.com/user-attachments/assets/404b0fd4-193a-4c8c-b28d-7d4ed41da7d5)
-
-**AWS Security Group Rules**
-
-![security groups](https://github.com/user-attachments/assets/1e4c5a8e-1e7f-40e4-88ab-8d81b616fe08)
-
 1. **Install HELM on "Master Node"**
    ```bash
    bash HelmInstaller/helmInstaller.sh
@@ -322,8 +313,16 @@ Before the deployment of the flask-app run kubectl get svc and copy the mysql cl
    ``` bash 
    kubectl get all
    ```
-   ![heml kubectll all](https://github.com/user-attachments/assets/52825e72-d20e-4e98-a445-e3bce73e6ae3)
-   ![AWS website result](https://github.com/user-attachments/assets/0dc74945-065a-4828-bd97-ab69d8bb706d)
+   <br>
+    <p align="center">
+       <img src="https://github.com/user-attachments/assets/0dc74945-065a-4828-bd97-ab69d8bb706d" width="800">
+    </p>
+   <br>
+    <p align="center">
+       <img src="https://github.com/user-attachments/assets/52825e72-d20e-4e98-a445-e3bce73e6ae3" width="800">
+    </p>
+   
+ 
 
     
    
