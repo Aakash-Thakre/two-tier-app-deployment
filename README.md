@@ -25,6 +25,21 @@
 
 ---
 
+## 🔁 Deployment Flow
+
+1. Build and test the application locally using **Docker & Docker Compose**
+2. Deploy the same application on a **self-managed Kubernetes cluster (kubeadm on AWS EC2)**
+3. Convert Kubernetes manifests into **Helm charts**
+4. Deploy the same stack using **Helm for production-style setup**
+5. (Optional / Next Step) Deploy on **AWS EKS**
+
+ <br>
+   <p align="center">
+       <img src="https://github.com/user-attachments/assets/faf66f65-cc68-4abc-8b57-89f896edc30c" width="800">
+</p>
+
+----
+
 - ## 📌 Architecture
 
 - Application Tier: Flask (Backend + API)
@@ -136,7 +151,7 @@ This phase demonstrates the setup of a Kubernetes cluster on AWS EC2 instances a
 - Security group configuration on AWS
 
 
-## For Kubeadm Installation Guide on AWS EC2 plese refer to the kubeinstaller directory
+## Installed KubeAdm Manually on AWS EC2 instances
 
    a. **AWS Instances**
    <br>
