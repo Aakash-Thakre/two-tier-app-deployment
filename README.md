@@ -70,7 +70,6 @@ A fully containerized Two-Tier Application consisting of:
    docker ps
 
 2. **Now, execute below commands one by one**
-
    ```bash
    git clone url
    cd two-tier-app-deployment
@@ -126,7 +125,7 @@ docker build -t flask-app .
 docker compose up -d --build
 ```
 
-----
+---
 
 # 📌 PHASE 2: Kubernetes Deployment ON AWS EC2
 
@@ -232,7 +231,7 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
     ![AWS Security Group rules](https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e)
 
 - Now, execute below commands one by one from k8
-- 
+  
 ```bash
 kubectl apply -f Sql_deployment.yml
 kubectl apply -f mysql-svc.yml
