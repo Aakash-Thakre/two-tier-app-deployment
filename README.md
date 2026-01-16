@@ -143,7 +143,7 @@ This phase demonstrates the setup of a Kubernetes cluster on AWS EC2 instances a
     <p align="center">
        <img src="https://github.com/user-attachments/assets/3dace7e7-c90d-4b7b-befc-e8a779ede7f0" width="800">
     </p>
-    
+    <br>
     b. **AWS Security Group Rules**
    <br>
     <p align="center">
