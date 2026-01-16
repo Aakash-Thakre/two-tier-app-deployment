@@ -253,8 +253,13 @@ kubectl apply -f flask-app-deployment-svc.yml
 - Multi-tier application deployed successfully and accessible
 - All pods running in Running state with healthy status
 
+  ![Result](https://github.com/user-attachments/assets/04f11921-7555-40d8-9883-cdc34e678790)
+  ![Pods](https://github.com/user-attachments/assets/e631672c-908f-4594-94f4-915567cb9e3c)
 
-📌 PHASE 3: Flask + MySQL on Kubernetes using Helm (AWS)
+
+---
+
+# 📌 PHASE 3: Flask + MySQL on Kubernetes using Helm (AWS)
 
 
 ## **Configure AWS instance using above Kubeadm Installation Guide**
@@ -293,7 +298,11 @@ kubectl apply -f flask-app-deployment-svc.yml
    ```
 4. Results
    ``` bash 
-   kubectl get pods 
+   kubectl get all
+   ```
+   ![heml kubectll all](https://github.com/user-attachments/assets/52825e72-d20e-4e98-a445-e3bce73e6ae3)
+   ![AWS website result](https://github.com/user-attachments/assets/0dc74945-065a-4828-bd97-ab69d8bb706d)
+
     
    
 
