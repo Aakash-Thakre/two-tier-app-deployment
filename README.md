@@ -230,7 +230,7 @@ Once AWS EC2 instances are created ssh with the help of provided command in AWS 
     **AWS Security Group Rules**
     <br>
    <p align="center">
-       <img src=" https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e" width="800">
+       <img src="https://github.com/user-attachments/assets/b39f2d35-160b-4f31-bc69-2d9a7575473e" width="800">
    </p>
    <br>
 
