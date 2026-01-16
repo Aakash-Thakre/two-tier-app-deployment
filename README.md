@@ -33,11 +33,6 @@
 4. Deploy the same stack using **Helm for production-style setup**
 5. Deploy on **AWS EKS**
 
- <br>
-   <p align="center">
-       <img src="https://github.com/user-attachments/assets/faf66f65-cc68-4abc-8b57-89f896edc30c" width="800">
-</p>
-
 ----
 
 - ## 📌 Architecture
