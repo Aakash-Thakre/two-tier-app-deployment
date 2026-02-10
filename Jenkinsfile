@@ -1,37 +1,22 @@
 pipeline{
-
-   agent any
-      
+    agent any
     stages{
-        stage("Code Clone"){
+        stage('Clone repo'){
             steps{
-               script{
-                   clone("https://github.com/Aakash-Thakre/two-tier-app-deployment.git", "main")
-               }
+                git branch: 'main', url: 'https://github.com/Aakash-Thakre/two-tier-app-deployment.git'
             }
         }
-        stage("Trivy File System Scan"){
+        stage('Build image'){
             steps{
-                script{
-                    trivy_fs()
-                }
+                sh 'docker build -t flask-app .'
             }
         }
-        stage("Build"){
+        stage('Deploy with docker compose'){
             steps{
-                sh "docker build -t two-tier-flask-app ."
-            }
-            
-        }
-        stage("Test"){
-            steps{
-                echo "Developer / Tester tests "
-            }
-            
-        }
-        stage("Deploy"){
-            steps{
-                sh "docker compose up -d --buid flask-app"
+                // existing container if they are running
+                sh 'docker compose down || true'
+                // start app, rebuilding flask image
+                sh 'docker compose up -d --build'
             }
         }
     }
