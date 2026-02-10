@@ -6,7 +6,7 @@ pipeline{
         stage("Code Clone"){
             steps{
                script{
-                   clone("https://github.com/Aakash-Thakre/two-tier-app-deployment.git", "maiin")
+                   clone("https://github.com/Aakash-Thakre/two-tier-app-deployment.git", "main")
                }
             }
         }
