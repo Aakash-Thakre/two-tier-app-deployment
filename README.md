@@ -1,4 +1,6 @@
-# 🚀 Multi-Phase Two Tier Application Deployment: Docker → Kubernetes → Helm/EKS
+# 🚀 End to End Two-Tier Application Deployment (  GitHub → CI/CD → Docker → Kubernetes → AWS EKS → LoadBalancer)
+
+A fully automated CI/CD & production-ready deployment of a two-tier Flask + MySQL application using Jenkins, Docker, Kubernetes, Helm, and AWS. Includes local, cluster, and cloud deployment stages.
 
 **This project demonstrates a complete real-world DevOps workflow by deploying a Flask + MySQL two-tier application in multiple phases:**
 
